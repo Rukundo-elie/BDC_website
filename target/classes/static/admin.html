@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDC Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="img/bdc-logo.png" alt="BDC Logo" class="logo">
+            <h2>BDC Admin Dashboard</h2>
+            <p class="slogan">Any Past, BDC Today, Better Futures</p>
+        </div>
+    </nav>
+
+    <!-- Admin Sections -->
+    <main>
+        <section>
+            <h3>Members</h3>
+            <table id="membersTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Join Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h3>Loans</h3>
+            <table id="loansTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Member ID</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h3>Messages</h3>
+            <table id="messagesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

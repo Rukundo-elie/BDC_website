@@ -1,0 +1,4 @@
+com\bdc\entity\Member.class
+com\bdc\BdcApplication.class
+com\bdc\controller\MemberController.class
+com\bdc\repository\MemberRepository.class

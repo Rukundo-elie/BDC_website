@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BDC Member Registration</title>
+</head>
+<body>
+
+<h2>BDC - Register Member</h2>
+
+<form id="memberForm">
+    Name:<br>
+    <input type="text" id="name"><br><br>
+
+    Email:<br>
+    <input type="text" id="email"><br><br>
+
+    Phone:<br>
+    <input type="text" id="phone"><br><br>
+
+    <button type="submit">Register</button>
+</form>
+
+<p id="response"></p>
+
+<script>
+document.getElementById("memberForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const member = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value
+    };
+
+    fetch("http://localhost:8080/members/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(member)
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("response").innerText =
+            "Member Registered Successfully! ID: " + data.id;
+    })
+    .catch(error => console.error(error));
+});
+</script>
+
+</body>
+</html>
